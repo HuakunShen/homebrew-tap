@@ -4,26 +4,26 @@
 class Bread < Formula
   desc "Bounded batch file reader for coding agents"
   homepage "https://github.com/HuakunShen/bread"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/HuakunShen/bread/releases/download/v0.2.2/bread_0.2.2_darwin_arm64.tar.gz"
-      sha256 "fa95e00a2a3596464b61a17c6b622b15327f2bd0d361f384718bf7f6c655604c"
+      url "https://github.com/HuakunShen/bread/releases/download/v0.2.3/bread_0.2.3_darwin_arm64.tar.gz"
+      sha256 "c4d2fb055583542e9f09174fd7b9686183fac0a7cab373cdaec6bc6678a07f6b"
     elsif Hardware::CPU.intel?
-      url "https://github.com/HuakunShen/bread/releases/download/v0.2.2/bread_0.2.2_darwin_amd64.tar.gz"
-      sha256 "be0b5f32a46920985ed4f7a9d5bf886f3d4ebecc922869962594daa8753544a6"
+      url "https://github.com/HuakunShen/bread/releases/download/v0.2.3/bread_0.2.3_darwin_amd64.tar.gz"
+      sha256 "6e91ce48cadfe6f6bddd4de5bda5f93f862c09e4699a2ee70dde030e6baf54bd"
     else
       raise "Unsupported macOS architecture"
     end
   elsif OS.linux?
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HuakunShen/bread/releases/download/v0.2.2/bread_0.2.2_linux_arm64.tar.gz"
-      sha256 "8ff09f4e0537729aaa5711bd4a9d1ae56bc99a1da9e9741fddaacde57ee94b94"
+      url "https://github.com/HuakunShen/bread/releases/download/v0.2.3/bread_0.2.3_linux_arm64.tar.gz"
+      sha256 "d942b8044bfa55a37ec71e63f12fe7e926b7a44db1d771f9d4a9d710f722e423"
     elsif Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HuakunShen/bread/releases/download/v0.2.2/bread_0.2.2_linux_amd64.tar.gz"
-      sha256 "3ce4737bf685099043a3d840709f78bb6ca9155ca567241a02572d3c18105b23"
+      url "https://github.com/HuakunShen/bread/releases/download/v0.2.3/bread_0.2.3_linux_amd64.tar.gz"
+      sha256 "2995f716a755afe4612283596793143c8f1ec74d2c5bfc8319a034498dc2894c"
     else
       raise "Unsupported Linux architecture"
     end
