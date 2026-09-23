@@ -10,10 +10,6 @@
 # then verify locally with:
 #   brew audit --cask refyard
 #   brew install --cask HuakunShen/tap/refyard
-#
-# `auto_updates true` is load-bearing: the app updates itself from the release feed
-# (tauri updater), so `brew upgrade` must not fight it — Homebrew will recognise the
-# newer installed version instead of reinstalling.
 cask "refyard" do
   arch arm: "aarch64", intel: "x64"
 
@@ -32,8 +28,6 @@ cask "refyard" do
       json["tag_name"]&.sub(/^app-v/, "")
     end
   end
-
-  auto_updates true
 
   app "Refyard.app"
 
