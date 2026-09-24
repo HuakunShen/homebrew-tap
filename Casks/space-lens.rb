@@ -7,8 +7,7 @@ cask "space-lens" do
   sha256 arm:   "2b63c5229a111d5682e27f750ef0edaf333317e60caf054fa5bbb8ff31c7d2fd",
          intel: "6e6d02e71ec249688f070a826f2c0b4b7e8cfe5afe95091230dc95862e4efcec"
 
-  url arm:   "https://github.com/HuakunShen/space-lens/releases/download/app-v0.1.0/Space.Lens_0.1.0_aarch64.dmg",
-      intel: "https://github.com/HuakunShen/space-lens/releases/download/app-v0.1.0/Space.Lens_0.1.0_x64.dmg"
+  url "https://github.com/HuakunShen/space-lens/releases/download/app-v#{version}/Space.Lens_#{version}_#{arch}.dmg"
   name "Space Lens"
   desc "Local-first disk map: scan any folder and stage cleanup candidates"
   homepage "https://github.com/HuakunShen/space-lens"
