@@ -14,9 +14,9 @@
 cask "refyard" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.3"
-  sha256 arm:   "f4f25f8b143bae23d56b2e77ff2f1f16710530bb0bb35cd1c91a7a156a7f7a2e",
-         intel: "5c340f980f27cdb8664c9845e78994c6e08e567d9b2ca7d96fefef18c713074f"
+  version "0.2.4"
+  sha256 arm:   "2fa1730abad4060655b721fa69f2e59695f15d6ecb400f7920d8843d608ede23",
+         intel: "ad1ec0977deda97cae217c0557c2afe27b17d1350c0c07234b7795d76b833128"
 
   url "https://github.com/HuakunShen/refyard/releases/download/app-v#{version}/Refyard_#{version}_#{arch}.dmg"
   name "Refyard"
@@ -34,6 +34,10 @@ cask "refyard" do
 
   zap trash: [
     "~/Library/Application Support/refyard",
+    # The identifier became tech.huakun.refyard after 0.2.2; zap cleans both so a
+    # machine that lived through the change keeps neither the old webview storage nor
+    # the new.
     "~/Library/WebKit/dev.refyard.desktop",
+    "~/Library/WebKit/tech.huakun.refyard",
   ]
 end
